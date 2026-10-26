@@ -6,6 +6,8 @@ Observed locally on **26 October 2026** using the existing LM Studio **Qwen3.5-4
 
 ## Exact reproduction
 
+Model download: [Qwen3.5-4B-Q8_0.gguf on Hugging Face](https://huggingface.co/lmstudio-community/Qwen3.5-4B-GGUF/blob/main/Qwen3.5-4B-Q8_0.gguf), from the [LM Studio Community GGUF repository](https://huggingface.co/lmstudio-community/Qwen3.5-4B-GGUF).
+
 Run from the repository root after following the [setup instructions](../../README.md):
 
 ```bash

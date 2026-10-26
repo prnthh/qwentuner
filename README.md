@@ -10,6 +10,8 @@ The [known working “evil Qwen” case](known-cases/evil-qwen/README.md) preser
 
 ## Setup
 
+Model: [Qwen3.5-4B-GGUF on Hugging Face](https://huggingface.co/lmstudio-community/Qwen3.5-4B-GGUF). The local experiments use [Qwen3.5-4B-Q8_0.gguf](https://huggingface.co/lmstudio-community/Qwen3.5-4B-GGUF/blob/main/Qwen3.5-4B-Q8_0.gguf) (approximately 4.48 GB). [Download the Q8_0 file directly](https://huggingface.co/lmstudio-community/Qwen3.5-4B-GGUF/resolve/main/Qwen3.5-4B-Q8_0.gguf), then supply its location with `--model /absolute/path/Qwen3.5-4B-Q8_0.gguf`.
+
 Requires Python 3.12, `uv`, CMake, a C++ compiler, and Apple Metal for the tested configuration. CPU execution is available with `--gpu-layers 0`; other GPU backends require appropriate llama.cpp build flags.
 
 ```bash
