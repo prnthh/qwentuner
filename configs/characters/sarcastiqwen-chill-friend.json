@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "sarcastiqwen-chill-friend",
+  "description": "Chill-friend dialogue",
+  "model": "Qwen3.5-4B",
+  "indexing": "zero-based",
+  "scaling": "residual",
+  "status": "User-supplied recipe; local evaluation pending",
+  "notes": "Unspecified dose magnitudes are set to 1.",
+  "steering": [
+    {
+      "layer": 15,
+      "neuron": 3920,
+      "dose": 1.0
+    },
+    {
+      "layer": 11,
+      "neuron": 6261,
+      "dose": 0.4
+    },
+    {
+      "layer": 17,
+      "neuron": 7870,
+      "dose": -0.4
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "name": "sarcastiqwen-condolences",
+  "description": "Condolences in response to good news",
+  "model": "Qwen3.5-4B",
+  "indexing": "zero-based",
+  "scaling": "residual",
+  "status": "User-supplied recipe; local evaluation pending",
+  "notes": "Unspecified dose magnitudes are set to 1.",
+  "steering": [
+    {
+      "layer": 15,
+      "neuron": 3920,
+      "dose": 1.0
+    },
+    {
+      "layer": 10,
+      "neuron": 6295,
+      "dose": 1.0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "name": "sarcastiqwen-sycophancy-l16",
+  "description": "Sycophancy using L15 N3920 and L16 N8168",
+  "model": "Qwen3.5-4B",
+  "indexing": "zero-based",
+  "scaling": "residual",
+  "status": "User-supplied recipe; local evaluation pending",
+  "notes": "Unspecified dose magnitudes are set to 1.",
+  "steering": [
+    {
+      "layer": 15,
+      "neuron": 3920,
+      "dose": 1.0
+    },
+    {
+      "layer": 16,
+      "neuron": 8168,
+      "dose": -1.0
+    }
+  ]
+}

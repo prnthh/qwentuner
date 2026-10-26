@@ -1,0 +1,35 @@
+{
+  "model": "/Users/prnth/.cache/lm-studio/models/lmstudio-community/Qwen3.5-4B-GGUF/Qwen3.5-4B-Q8_0.gguf",
+  "model_bytes": 4482402656,
+  "model_mtime_ns": 1793010481185440271,
+  "architecture": "qwen35",
+  "layers": 32,
+  "llama_cpp_revision": "8b28c2394324465bf7727089e7eaf7aec9442d6a",
+  "indexing": "zero-based",
+  "activation": "SiLU(gate_proj(x)) * up_proj(x), before down_proj",
+  "sampling": "greedy",
+  "chat": "Qwen3.5, thinking disabled unless --raw",
+  "created_utc": "2026-10-26T11:02:17.136544+00:00",
+  "arguments": {
+    "model": null,
+    "output": "runs/pair-metal",
+    "gpu_layers": 99,
+    "context": 2048,
+    "raw": false,
+    "command": "steer",
+    "prompt": "A friend takes credit for my work. What should I do?",
+    "steer": [],
+    "recipe": "qwen35-pair",
+    "scale": "residual",
+    "max_tokens": 96,
+    "sweep": [
+      0.1,
+      0.3,
+      1.0
+    ]
+  },
+  "source_sha256": {
+    "qwentuner.py": "ae57f05f290f3d5e1265a05e2682d9d25f23c3b9fbbd845dcbc4120a27344746",
+    "runner.cpp": "1e2d9cd354bc28f95777f7712d78427ecda5b593b33f6334eb733c750fe02fcd"
+  }
+}
