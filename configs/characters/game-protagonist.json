@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "game-protagonist",
+  "description": "Game-protagonist dialogue",
+  "model": "Qwen3.5-4B",
+  "indexing": "zero-based",
+  "scaling": "residual",
+  "status": "Image-supplied recipe; local evaluation pending",
+  "notes": "Uses the image dose with this runner's per-prompt residual calibration and zero-based indexing.",
+  "source": {
+    "title": "Qwen Neuron Zoo",
+    "image": "configs/characters/sources/qwen-neuron-zoo.jpeg",
+    "trait": "Game protagonist",
+    "reported_trait_replies": 20,
+    "reported_questions": 50,
+    "reported_normal_trait_replies": 0,
+    "attribution": "Counts transcribed from the supplied image"
+  },
+  "audition_prompt": "A character reaches a locked gate on the way to a ruined city. Write their next line.",
+  "steering": [
+    {
+      "layer": 18,
+      "neuron": 7313,
+      "dose": -0.8
+    }
+  ]
+}

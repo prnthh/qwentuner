@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "apology",
+  "description": "Groveling, apologetic dialogue",
+  "model": "Qwen3.5-4B",
+  "indexing": "zero-based",
+  "scaling": "residual",
+  "status": "Image-supplied recipe; local evaluation pending",
+  "notes": "Uses the image dose with this runner's per-prompt residual calibration and zero-based indexing.",
+  "source": {
+    "title": "Qwen Neuron Zoo",
+    "image": "configs/characters/sources/qwen-neuron-zoo.jpeg",
+    "trait": "Groveling apology",
+    "reported_trait_replies": 44,
+    "reported_questions": 50,
+    "reported_normal_trait_replies": 0,
+    "attribution": "Counts transcribed from the supplied image"
+  },
+  "audition_prompt": "A character arrives late to a meeting with their crew. Write their opening line.",
+  "steering": [
+    {
+      "layer": 7,
+      "neuron": 4595,
+      "dose": -0.8
+    }
+  ]
+}

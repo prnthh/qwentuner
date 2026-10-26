@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "sleepy",
+  "description": "Sleepy dialogue",
+  "model": "Qwen3.5-4B",
+  "indexing": "zero-based",
+  "scaling": "residual",
+  "status": "Image-supplied recipe; local evaluation pending",
+  "notes": "Uses the image dose with this runner's per-prompt residual calibration and zero-based indexing.",
+  "source": {
+    "title": "Qwen Neuron Zoo",
+    "image": "configs/characters/sources/qwen-neuron-zoo.jpeg",
+    "trait": "Sleepy",
+    "reported_trait_replies": 34,
+    "reported_questions": 50,
+    "reported_normal_trait_replies": 1,
+    "attribution": "Counts transcribed from the supplied image"
+  },
+  "audition_prompt": "A crewmate wakes a character for an early watch. Write the character's reply.",
+  "steering": [
+    {
+      "layer": 19,
+      "neuron": 4699,
+      "dose": -0.8
+    }
+  ]
+}

@@ -6,7 +6,7 @@ See [RESULTS.md](RESULTS.md) for the completed local experiments, including a P-
 
 The [known working “evil Qwen” case](known-cases/evil-qwen/README.md) preserves the exact two-neuron reproduction command, calibration values, baseline comparison and original evidence files.
 
-[Character configs](configs/characters/README.md) include six character cases: `evil-qwen`, `sarcastiqwen`, two sycophancy cases, condolences and chill-friend. Each file contains its own full neuron list. Use them with `steer --config NAME`. Evil-qwen has the single-prompt observation documented above; local evaluation is pending for the other five cases.
+[Character configs](configs/characters/README.md) include 13 character cases: `evil-qwen`, `sarcastiqwen`, two sycophancy cases, condolences, chill-friend, Cookie, Apology, All Caps, Game Protagonist, Fate & Destiny, Sleepy and Meme Explainer. Each file specifies its neurons and doses. Use them with `steer --config NAME`. Evil-qwen has the single-prompt observation documented above; local evaluation is pending for the other cases. The Neuron Zoo configs include the supplied image's reported results and suggested audition scenes.
 
 ## Setup
 

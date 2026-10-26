@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "all-caps",
+  "description": "Dialogue in capital letters",
+  "model": "Qwen3.5-4B",
+  "indexing": "zero-based",
+  "scaling": "residual",
+  "status": "Image-supplied recipe; local evaluation pending",
+  "notes": "Uses the image dose with this runner's per-prompt residual calibration and zero-based indexing.",
+  "source": {
+    "title": "Qwen Neuron Zoo",
+    "image": "configs/characters/sources/qwen-neuron-zoo.jpeg",
+    "trait": "ALL CAPS",
+    "reported_trait_replies": 37,
+    "reported_questions": 50,
+    "reported_normal_trait_replies": 0,
+    "attribution": "Counts transcribed from the supplied image"
+  },
+  "audition_prompt": "A lookout spots something unexpected on the horizon. Write one line of dialogue.",
+  "steering": [
+    {
+      "layer": 17,
+      "neuron": 1991,
+      "dose": 0.8
+    }
+  ]
+}

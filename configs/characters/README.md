@@ -29,6 +29,35 @@ Unspecified magnitudes are assumed to be 1. All indices are zero-based and doses
 | `sarcastiqwen-condolences` | L15 N3920 +1; L10 N6295 +1 |
 | `sarcastiqwen-chill-friend` | L15 N3920 +1; L11 N6261 +0.4; L17 N7870 −0.4 |
 
+## Qwen Neuron Zoo cases
+
+These seven recipes come from the supplied [Qwen Neuron Zoo image](sources/qwen-neuron-zoo.jpeg). Each config contains the single neuron shown on its card. Cookie, Apology, All Caps and Game Protagonist were requested; Fate & Destiny, Sleepy and Meme Explainer add a fatalistic voice, a low-energy voice and a comic explanatory voice to audition.
+
+| Config | Neuron and dose | Image-reported trait replies | Image-reported normal replies |
+| --- | --- | ---: | ---: |
+| `cookie` | L24 N3102 +0.8 | 50/50 | 0/50 |
+| `apology` | L7 N4595 −0.8 | 44/50 | 0/50 |
+| `all-caps` | L17 N1991 +0.8 | 37/50 | 0/50 |
+| `game-protagonist` | L18 N7313 −0.8 | 20/50 | 0/50 |
+| `fate-and-destiny` | L24 N6441 −0.8 | 50/50 | 0/50 |
+| `sleepy` | L19 N4699 −0.8 | 34/50 | 1/50 |
+| `meme-explainer` | L8 N5655 +0.8 | 18/50 | 0/50 |
+
+The counts are claims transcribed from the image; local evaluation of these recipes is pending. The image describes doses relative to the layer's typical residual size on every token. These configs use our documented per-prompt residual calibration and zero-based indexing; the image leaves the exact calibration procedure and indexing convention implicit.
+
+```bash
+.venv/bin/python qwentuner.py steer --config cookie --sweep 1 \
+  --prompt "Two travelers discover an empty treasure chest. Write one line of dialogue reacting to it."
+
+.venv/bin/python qwentuner.py steer --config game-protagonist --sweep 1 \
+  --prompt "A character reaches a locked gate on the way to a ruined city. Write their next line."
+
+.venv/bin/python qwentuner.py steer --config all-caps --sweep 1 \
+  --prompt "A lookout spots something unexpected on the horizon. Write one line of dialogue."
+```
+
+`--sweep 1` applies each card's exact configured dose, such as +0.8 or −0.8, alongside the baseline. Each new JSON also includes an `audition_prompt` as a suggested scene; pass that text through `--prompt` when running. The `source` fields preserve the card label and reported counts in run manifests.
+
 ## Use a config
 
 From the repository root:

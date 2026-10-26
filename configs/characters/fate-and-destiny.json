@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "fate-and-destiny",
+  "description": "Dialogue centered on fate and destiny",
+  "model": "Qwen3.5-4B",
+  "indexing": "zero-based",
+  "scaling": "residual",
+  "status": "Image-supplied recipe; local evaluation pending",
+  "notes": "Uses the image dose with this runner's per-prompt residual calibration and zero-based indexing.",
+  "source": {
+    "title": "Qwen Neuron Zoo",
+    "image": "configs/characters/sources/qwen-neuron-zoo.jpeg",
+    "trait": "Fate & destiny",
+    "reported_trait_replies": 50,
+    "reported_questions": 50,
+    "reported_normal_trait_replies": 0,
+    "attribution": "Counts transcribed from the supplied image"
+  },
+  "audition_prompt": "Two strangers find that they carry identical keys. Write one line of dialogue.",
+  "steering": [
+    {
+      "layer": 24,
+      "neuron": 6441,
+      "dose": -0.8
+    }
+  ]
+}
